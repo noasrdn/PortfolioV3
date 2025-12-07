@@ -173,11 +173,12 @@ export default function Portfolio() {
             <div className="space-y-6">
               <GlassmorphicCard>
                 <p className="text-lg text-zinc-300">
-                  Je suis un jeune étudiant de 19 ans, passionné par le
-                  développement web. J’ai commencé à coder à l’âge de 14 ans, en
+                  Hello ! Moi c'est Noa, je suis un étudiant de 19 ans en 2ème 
+                  année de BUT MMI (métiers du multimédia et de l'Internet) et 
+                  voici mon histoire : J’ai commencé à coder à l’âge de 14 ans, en
                   créant de petites applications en C, Batch et VBScript durant
                   mon temps libre, directement depuis le Bloc-notes de mon
-                  ordinateur Windows. Haha :) Par la suite, je me suis intéressé
+                  ordinateur. Haha :) Par la suite, je me suis intéressé
                   à la cybersécurité dans l’objectif de devenir expert dans ce
                   domaine.
                 </p>
