@@ -288,7 +288,7 @@ export default function Portfolio() {
               title="Arcane Fan Webpage"
               description="Page Web de présentation de la série animé Arcane."
               tags={["Javascript", "HTML", "CSS", "Figma", "API"]}
-              image="/arcane.png?height=400&width=600"
+              image="/Arcane.png?height=400&width=600"
               demoUrl="https://example.com"
               repoUrl="https://github.com"
             />
@@ -306,7 +306,7 @@ export default function Portfolio() {
               title="GorpCore"
               description="Création d'un site pour une marque de vêtements nommé GORPCORE. Ce projet m'as notament permis de travaillé les positions des éléments"
               tags={["Html", "CSS", "Figma"]}
-              image="/gorpcore.png?height=400&width=600"
+              image="/GorpCore.png?height=400&width=600"
               demoUrl="https://example.com"
               repoUrl="https://github.com"
             />
@@ -315,7 +315,7 @@ export default function Portfolio() {
               title="Shadow Energy Drink"
               description="Création d'une publicité pour une boisson qui rendrait 'IMMORTELLE' ! "
               tags={["Illustrator", "Photoshop"]}
-              image="/shadow.png?height=400&width=600"
+              image="/Shadow.png?height=400&width=600"
               demoUrl="https://example.com"
               repoUrl="https://github.com"
             />
@@ -324,7 +324,7 @@ export default function Portfolio() {
               title="Profuse"
               description="Mon tout premier SiteWeb ! Site de documentation d'un F1 sponsorisé par Nike pour le Jeu Vidéo Trackmania"
               tags={["HTML", "CSS", "FIgma", "Illustrator"]}
-              image="/profuse.png?height=400&width=600"
+              image="/Profuse.png?height=400&width=600"
               demoUrl="https://example.com"
               repoUrl="https://github.com"
             />

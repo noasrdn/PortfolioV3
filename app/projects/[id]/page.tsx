@@ -23,7 +23,7 @@ const projectsData: { [key: string]: any } = {
     fullDescription:
       "Arcane Fan Page est mon tout premier projet scolaire mené durant ma 1ère année de BUT MMI. Ce projet consistait à concevoir un site web sur un sujet libre, tout en intégrant des contraintes de production spécifiques que vous retrouverez ci-dessous.",
     tags: ["JavaScript", "HTML", "CSS", "Figma", "API"],
-    image: "/arcane.png?height=600&width=1200",
+    image: "/Arcane.png?height=600&width=1200",
     galleryImages: [
       "/arcane_1.png?height=300&width=600",
       "/arcane_2.png?height=300&width=600",
@@ -53,7 +53,7 @@ const projectsData: { [key: string]: any } = {
     fullDescription:
       "DivinByDivin Refont est un projet scolaire de 1ère année de BUT MMI. L'objectif était d'analyser la stratégie marketing d'une marque existante pour l'améliorer. J'ai pris l'initiative de recoder entièrement la maquette au-delà de l'exercice demandé, afin d'obtenir un résultat plus abouti.",
     tags: ["Figma", "HTML", "CSS", "Javascript"],
-    image: "/divinByDivin.png?height=600&width=1200",
+    image: "/DivinByDivin.png?height=600&width=1200",
     // galleryImages: ["/placeholder.svg?height=300&width=600", "/placeholder.svg?height=300&width=600"],
     demoUrl: "",
     repoUrl: "",
@@ -79,7 +79,7 @@ const projectsData: { [key: string]: any } = {
     fullDescription:
       "GorpCore est un projet personnel réalisé en autodidacte avant mes études supérieures. Je me suis lancé ce défi dans le but précis de comprendre et maîtriser les propriétés CSS 'position: absolute' et 'z-index'.",
     tags: ["Figma", "HTML", "CSS"],
-    image: "/gorpcore.png?height=600&width=1200",
+    image: "/GorpCore.png?height=600&width=1200",
     // galleryImages: ["/placeholder.svg?height=300&width=600", "/placeholder.svg?height=300&width=600"],
     demoUrl: "",
     repoUrl: "",
@@ -104,8 +104,8 @@ const projectsData: { [key: string]: any } = {
     fullDescription:
       "Shadow Energy Drink est un projet réalisé lors d'un TP de Création Numérique. La consigne était de choisir un sujet parmi une liste et de concevoir toute son identité publicitaire : logo, nom de marque, direction artistique et mise en situation du produit.",
     tags: ["PhotoShop", "Illustrator"],
-    image: "/shadow.png?height=600&width=1200",
-    galleryImages: ["/shadow_1.png?height=300&width=600", 
+    image: "/Shadow.png?height=600&width=1200",
+    galleryImages: ["/Shadow_1.png?height=300&width=600", 
       "/Logo_Shadow.png?height=300&width=600"],
     demoUrl: "",
     repoUrl: "",
@@ -206,7 +206,7 @@ const projectsData: { [key: string]: any } = {
       "Illustrator",
       "TypeScript",
     ],
-    image: "/spiderman.png?height=600&width=1200",
+    image: "/Spiderman.png?height=600&width=1200",
     galleryImages: ["/spiderman_1.png?height=300&width=600", "/spiderman_2.png?height=300&width=600"],
     demoUrl: "",
     repoUrl: "",
