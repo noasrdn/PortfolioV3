@@ -129,7 +129,7 @@ const projectsData: { [key: string]: any } = {
     fullDescription:
       "Profuse est mon tout premier véritable site web 'OnePage'. J'ai réalisé ce projet comme exercice pratique durant ma formation de développement web sur OpenClassrooms. Il met en avant un véhicule de type F1 issu du jeu Trackmania, sponsorisé par Nike.",
     tags: ["HTML5", "CSS3", "Figma"],
-    image: "/profuse_1.png?height=600&width=1200",
+    image: "/Profuse_1.png?height=600&width=1200",
     // galleryImages: ["/placeholder.svg?height=300&width=600", "/placeholder.svg?height=300&width=600"],
     demoUrl: "",
     repoUrl: "",
