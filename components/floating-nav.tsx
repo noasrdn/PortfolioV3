@@ -1,32 +1,32 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import { motion } from "framer-motion"
-import { Menu, X } from "lucide-react"
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
 
-import { Button } from "@/components/ui/button"
-import { useIsMobile } from "@/hooks/use-mobile"
+import { Button } from "@/components/ui/button";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export function FloatingNav() {
-  const [isVisible, setIsVisible] = useState(false)
-  const [isOpen, setIsOpen] = useState(false)
-  const isMobile = useIsMobile()
+  const [isVisible, setIsVisible] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 100) {
-        setIsVisible(true)
+        setIsVisible(true);
       } else {
-        setIsVisible(false)
+        setIsVisible(false);
       }
-    }
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navItems = [
     { name: "About", href: "#about" },
@@ -34,20 +34,23 @@ export function FloatingNav() {
     { name: "Projects", href: "#projects" },
     { name: "Experience", href: "#experience" },
     { name: "Contact", href: "#contact" },
-  ]
+  ];
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
     if (href.startsWith("#")) {
-      e.preventDefault()
-      const element = document.querySelector(href)
+      e.preventDefault();
+      const element = document.querySelector(href);
       if (element) {
-        element.scrollIntoView({ behavior: "smooth" })
+        element.scrollIntoView({ behavior: "smooth" });
       }
     }
     if (isMobile) {
-      setIsOpen(false)
+      setIsOpen(false);
     }
-  }
+  };
 
   return (
     <>
@@ -74,7 +77,11 @@ export function FloatingNav() {
                 className="text-zinc-400 hover:text-white hover:bg-zinc-700/50"
                 onClick={() => setIsOpen(!isOpen)}
               >
-                {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+                {isOpen ? (
+                  <X className="h-5 w-5" />
+                ) : (
+                  <Menu className="h-5 w-5" />
+                )}
               </Button>
             </div>
           ) : (
@@ -95,12 +102,14 @@ export function FloatingNav() {
                   {item.name}
                 </a>
               ))}
-              <Button
-                size="sm"
-                className="ml-2 bg-gradient-to-r from-brand-blue to-brand-rose hover:from-brand-rose hover:to-brand-blue border-0"
-              >
-                Resume
-              </Button>
+              <a href="/SERODON_Noa_CV.pdf" target="_blank">
+                <Button
+                  size="sm"
+                  className="ml-2 bg-gradient-to-r from-brand-blue to-brand-rose hover:from-brand-rose hover:to-brand-blue border-0"
+                >
+                  Download CV
+                </Button>
+              </a>
             </div>
           )}
         </div>
@@ -132,5 +141,5 @@ export function FloatingNav() {
         </motion.div>
       )}
     </>
-  )
+  );
 }

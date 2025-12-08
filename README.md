@@ -47,4 +47,4 @@ git add . : Pour préparer tous les changements dans la zone de staging (zone de
 
 git commit -m "Mon message explicatif" : Pour enregistrer vos changements de manière permanente dans l'historique local.
 
-git push : Pour envoyer vos commits locaux vers le dépôt distant (GitHub, GitLab, etc.).
+git push origin main : Pour envoyer vos commits locaux vers le dépôt distant (GitHub, GitLab, etc.).
