@@ -28,8 +28,8 @@ const projectsData: { [key: string]: any } = {
       "/arcane_1.png?height=300&width=600",
       "/arcane_2.png?height=300&width=600",
     ],
-    demoUrl: "",
-    repoUrl: "",
+    demoUrl: "https://arcane-fan-webpage.vercel.app",
+    repoUrl: "https://github.com/noasrdn/Arcane-fan-webpage.git",
     features: [
       "Maquettage des pages web sur Figma",
       "Préparation des images et contenus",
@@ -81,8 +81,8 @@ const projectsData: { [key: string]: any } = {
     tags: ["Figma", "HTML", "CSS"],
     image: "/GorpCore.png?height=600&width=1200",
     // galleryImages: ["/placeholder.svg?height=300&width=600", "/placeholder.svg?height=300&width=600"],
-    demoUrl: "",
-    repoUrl: "",
+    demoUrl: "gorpcore-nc4bx94l1-noaserodon-3755s-projects.vercel.app",
+    repoUrl: "https://github.com/noasrdn/GorpCore.git",
     features: [
       "Maquettage de la page sur Figma",
       "Préparation des assets graphiques",
@@ -107,8 +107,6 @@ const projectsData: { [key: string]: any } = {
     image: "/Shadow.png?height=600&width=1200",
     galleryImages: ["/Shadow_1.png?height=300&width=600", 
       "/Logo_Shadow.png?height=300&width=600"],
-    demoUrl: "",
-    repoUrl: "",
     features: [
       "Création du logotype",
       "Design du packaging",
@@ -131,8 +129,8 @@ const projectsData: { [key: string]: any } = {
     tags: ["HTML5", "CSS3", "Figma"],
     image: "/Profuse_1.png?height=600&width=1200",
     // galleryImages: ["/placeholder.svg?height=300&width=600", "/placeholder.svg?height=300&width=600"],
-    demoUrl: "",
-    repoUrl: "",
+    demoUrl: "https://profuse-e1py271ny-noaserodon-3755s-projects.vercel.app",
+    repoUrl: "https://github.com/noasrdn/Profuse.git",
     features: [
       "Maquettage de la OnePage sur Figma",
       "Préparation des médias",
