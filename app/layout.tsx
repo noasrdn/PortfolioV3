@@ -4,8 +4,7 @@ import "./globals.css"
 
 export const metadata: Metadata = {
   title: "Noa Serodon - Portfolio",
-  description: "Created By NozzDEV",
-  generator: "v0.dev",
+  description: "Portfolio de Noa Serodon, étudiant en 2ème année de BUT MMI spécialité développement web. Découvrez mes projets et mes compétences !",
 }
 
 export default function RootLayout({

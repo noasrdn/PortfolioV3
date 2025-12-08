@@ -173,13 +173,13 @@ export default function Portfolio() {
             <div className="space-y-6">
               <GlassmorphicCard>
                 <p className="text-lg text-zinc-300">
-                  Hello ! Moi c'est Noa, je suis un étudiant de 19 ans en 2ème 
-                  année de BUT MMI (métiers du multimédia et de l'Internet) et 
-                  voici mon histoire : J’ai commencé à coder à l’âge de 14 ans, en
-                  créant de petites applications en C, Batch et VBScript durant
-                  mon temps libre, directement depuis le Bloc-notes de mon
-                  ordinateur. Haha :) Par la suite, je me suis intéressé
-                  à la cybersécurité dans l’objectif de devenir expert dans ce
+                  Hello ! Moi c'est Noa, je suis un étudiant de 19 ans en 2ème
+                  année de BUT MMI (métiers du multimédia et de l'Internet) et
+                  voici mon histoire : J’ai commencé à coder à l’âge de 14 ans,
+                  en créant de petites applications en C, Batch et VBScript
+                  durant mon temps libre, directement depuis le Bloc-notes de
+                  mon ordinateur. Haha :) Par la suite, je me suis intéressé à
+                  la cybersécurité dans l’objectif de devenir expert dans ce
                   domaine.
                 </p>
                 <p className="text-lg text-zinc-300 mt-4">
@@ -230,9 +230,14 @@ export default function Portfolio() {
                 </div>
 
                 <div className="mt-8">
-                  <Button className="bg-zinc-800 hover:bg-zinc-700 text-white">
-                    Download Resume
-                  </Button>
+                  <a
+                    href="/SERODON_Noa_CV.pdf"
+                    target="_blank"
+                  >
+                    <Button className="bg-zinc-800 hover:bg-zinc-700 text-white">
+                      Download CV
+                    </Button>
+                  </a>
                 </div>
               </GlassmorphicCard>
             </div>
@@ -254,18 +259,18 @@ export default function Portfolio() {
           />
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-16">
-            <SkillBadge name="JavaScript" level={90} />
-            <SkillBadge name="TypeScript" level={85} />
-            <SkillBadge name="React" level={95} />
-            <SkillBadge name="Next.js" level={90} />
-            <SkillBadge name="Node.js" level={80} />
+            <SkillBadge name="JavaScript" level={75} />
+            <SkillBadge name="Sassy CSS" level={90} />
+            <SkillBadge name="Python" level={80} />
+            <SkillBadge name="TypeScript" level={25} />
+            <SkillBadge name="PHP" level={85} />
             <SkillBadge name="HTML/CSS" level={95} />
             <SkillBadge name="Tailwind CSS" level={90} />
-            <SkillBadge name="GSAP" level={75} />
-            <SkillBadge name="SQL" level={70} />
-            <SkillBadge name="PHP" level={65} />
-            <SkillBadge name="Python" level={60} />
-            <SkillBadge name="Git" level={85} />
+            <SkillBadge name="UNIX" level={80} />
+            <SkillBadge name="Node.js" level={30} />
+            <SkillBadge name="SQL" level={80} />
+            <SkillBadge name="React" level={25} />
+            <SkillBadge name="Git" level={95} />
           </div>
         </div>
       </section>
@@ -296,7 +301,7 @@ export default function Portfolio() {
             <ProjectCard
               id="2"
               title="DivinByDivin Refont"
-              description="Refont d'un site xeb déja existant pour une marque de vêtements Indépendante"
+              description="Refont d'un site Web déja existant pour une marque de vêtements Indépendante"
               tags={["Figma", "Html", "CSS", "Javascript"]}
               image="/DivinByDivin.png?height=400&width=600"
               demoUrl="https://example.com"
