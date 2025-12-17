@@ -28,7 +28,7 @@ To run this project locally, follow these steps:
 
 2. Navigate to the project directory:
    \`\`\`bash
-   cd Creative-Portfolio
+   cd PortFolioV3
    \`\`\`
 
 3. Install dependencies:

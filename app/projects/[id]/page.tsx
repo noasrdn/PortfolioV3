@@ -81,7 +81,7 @@ const projectsData: { [key: string]: any } = {
     tags: ["Figma", "HTML", "CSS"],
     image: "/GorpCore.png?height=600&width=1200",
     // galleryImages: ["/placeholder.svg?height=300&width=600", "/placeholder.svg?height=300&width=600"],
-    demoUrl: "gorpcore-nc4bx94l1-noaserodon-3755s-projects.vercel.app",
+    demoUrl: "https://gorpcore.vercel.app",
     repoUrl: "https://github.com/noasrdn/GorpCore.git",
     features: [
       "Maquettage de la page sur Figma",

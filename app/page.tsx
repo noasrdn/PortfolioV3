@@ -347,7 +347,7 @@ export default function Portfolio() {
             <ProjectCard
               id="7"
               title="AIRIS"
-              description="Création de Lunette Révolutionnaire avec IA intégrée pour permettre aux personnes aveugle d'écouter le monde qui l'es entourent !"
+              description="Création de Lunette Révolutionnaire avec IA intégrée pour permettre aux personnes aveugle d'écouter le monde qui les entourent !"
               tags={["Figma", "Photoshop", "Illustrator"]}
               image="/Airis.png?height=400&width=600"
               demoUrl="https://example.com"
