@@ -4,6 +4,20 @@ import { motion } from "framer-motion"
 import { useIsMobile } from "@/hooks/use-mobile"
 
 const experiences = [
+    {
+    title: "Stage (8semaines)",
+    company: "ELEVATE",
+    period: "2026",
+    description:
+      "1 mois en intérimaire chez Granger Frère, une usine de Plasturgie .",
+  },
+    {
+    title: "Formation en ligne sur la technologie Three.js",
+    company: "ThreeJS Journey",
+    period: "2026",
+    description:
+      "Suivi de la formation en ligne de Bruno Simon sur Javascript et Three.js",
+  },
   {
     title: "Job étudiant",
     company: "Granger Frères",

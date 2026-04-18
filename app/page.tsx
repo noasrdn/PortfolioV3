@@ -193,10 +193,8 @@ export default function Portfolio() {
                   HTML, CSS et PHP assez tôt, ce qui m’a donné l’opportunité de
                   m’exercer sur divers projets personnels.
                 </p>
-                <p className="text-lg text-zinc-300 mt-4">
-                  Avec le temps, le développement web m’a tellement passionné
-                  que j’ai décidé d’abandonner la cybersécurité pour me
-                  concentrer pleinement sur ce métier. En 2022, j’ai ainsi pu
+                {/* <p className="text-lg text-zinc-300 mt-4">
+                  En 2022, j’ai ainsi pu
                   participer à la DigiWeek : un stage d’immersion d’une semaine
                   dans une école supérieure du digital (ESD), située à Lyon.
                   Aujourd’hui, j’aimerais faire de ces compétences mon métier.
@@ -204,7 +202,7 @@ export default function Portfolio() {
                   léger avantage dans ce domaine, ainsi qu’une richesse
                   d’expériences à travers les différents projets que j’ai pu
                   réaliser.
-                </p>
+                </p> */}
 
                 <div className="grid grid-cols-2 gap-4 mt-8">
                   <div className="space-y-1">
@@ -295,7 +293,7 @@ export default function Portfolio() {
               description="Page Web de présentation de la série animé Arcane."
               tags={["Javascript", "HTML", "CSS", "Figma", "API"]}
               image="/Arcane.png?height=400&width=600"
-              demoUrl="https://example.com"
+              // demoUrl="https://example.com"
               repoUrl="https://github.com"
             />
             <ProjectCard
@@ -305,7 +303,7 @@ export default function Portfolio() {
               tags={["Figma", "Html", "CSS", "Javascript"]}
               image="/DivinByDivin.png?height=400&width=600"
               demoUrl="https://example.com"
-              repoUrl="https://github.com"
+              // repoUrl="https://github.com"
             />
             <ProjectCard
               id="3"
@@ -313,8 +311,8 @@ export default function Portfolio() {
               description="Création d'un site pour une marque de vêtements nommé GORPCORE. Ce projet m'as notament permis de travaillé les positions des éléments"
               tags={["Html", "CSS", "Figma"]}
               image="/GorpCore.png?height=400&width=600"
-              demoUrl="https://example.com"
-              repoUrl="https://github.com"
+              // demoUrl="https://example.com"
+              repoUrl="https://github.com/noasrdn/GorpCore.git"
             />
             <ProjectCard
               id="4"
@@ -322,8 +320,8 @@ export default function Portfolio() {
               description="Création d'une publicité pour une boisson qui rendrait 'IMMORTELLE' ! "
               tags={["Illustrator", "Photoshop"]}
               image="/Shadow.png?height=400&width=600"
-              demoUrl="https://example.com"
-              repoUrl="https://github.com"
+              
+              
             />
             <ProjectCard
               id="5"
@@ -336,6 +334,15 @@ export default function Portfolio() {
             />
             <ProjectCard
               id="6"
+              title="Elevate Web app"
+              description="Page Web de présentation de la série animé Arcane."
+              tags={["Figma", "Illustrator", "After Effect", "Premiere Pro", "Photoshop"]}
+              image="/Elevate.png?height=400&width=600"
+              demoUrl="https://example.com"
+              repoUrl="https://github.com"
+            />
+            <ProjectCard
+              id="7"
               title="KAMA"
               description="Création d'une affiche publicitaire pour le Groupe de Musique KAMA (Exercice avec contraintes : Couleurs | Contenu )"
               tags={["Illustrator", "Photoshop"]}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { use, useEffect } from "react";
 import Link from "next/link";
 import { ArrowLeft, ArrowUpRight, Contrast, Github } from "lucide-react";
 import { motion } from "framer-motion";
@@ -23,7 +23,7 @@ const projectsData: { [key: string]: any } = {
     fullDescription:
       "Arcane Fan Page est mon tout premier projet scolaire mené durant ma 1ère année de BUT MMI. Ce projet consistait à concevoir un site web sur un sujet libre, tout en intégrant des contraintes de production spécifiques que vous retrouverez ci-dessous.",
     tags: ["JavaScript", "HTML", "CSS", "Figma", "API"],
-    image: "/Arcane.png?height=600&width=1200",
+    image: "/arcane2.png?height=600&width=1200",
     galleryImages: [
       "/arcane_1.png?height=300&width=600",
       "/arcane_2.png?height=300&width=600",
@@ -39,7 +39,7 @@ const projectsData: { [key: string]: any } = {
       "Intégration d'éléments via API",
     ],
     challenge:
-      "En tant que perfectionniste, le principal défi était de créer un site visuellement agréable, moderne et dynamique, tout en respectant scrupuleusement les contraintes imposées.",
+      "Le principal défi était de créer un site visuellement agréable, moderne et dynamique, tout en respectant scrupuleusement les contraintes imposées.",
     solution: [
       "Intégration d'un carrousel automatique",
       "Utilisation de la sémantique HTML (Main, Article, Section...)",
@@ -49,14 +49,14 @@ const projectsData: { [key: string]: any } = {
   "2": {
     title: "DivinByDivin Refont",
     description:
-      "Refont d'un site xeb déja existant pour une marque de vêtements Indépendante",
+      "Refont d'un site web déja existant pour une marque de vêtements Indépendante",
     fullDescription:
       "DivinByDivin Refont est un projet scolaire de 1ère année de BUT MMI. L'objectif était d'analyser la stratégie marketing d'une marque existante pour l'améliorer. J'ai pris l'initiative de recoder entièrement la maquette au-delà de l'exercice demandé, afin d'obtenir un résultat plus abouti.",
     tags: ["Figma", "HTML", "CSS", "Javascript"],
     image: "/DivinByDivin.png?height=600&width=1200",
     // galleryImages: ["/placeholder.svg?height=300&width=600", "/placeholder.svg?height=300&width=600"],
-    demoUrl: "",
-    repoUrl: "",
+    // demoUrl: "",
+    // repoUrl: "",
     features: [
       "Analyse de la Direction Artistique et du public cible",
       "Maquettage de la refonte sur Figma",
@@ -79,9 +79,9 @@ const projectsData: { [key: string]: any } = {
     fullDescription:
       "GorpCore est un projet personnel réalisé en autodidacte avant mes études supérieures. Je me suis lancé ce défi dans le but précis de comprendre et maîtriser les propriétés CSS 'position: absolute' et 'z-index'.",
     tags: ["Figma", "HTML", "CSS"],
-    image: "/GorpCore.png?height=600&width=1200",
-    // galleryImages: ["/placeholder.svg?height=300&width=600", "/placeholder.svg?height=300&width=600"],
-    demoUrl: "https://gorpcore.vercel.app",
+    image: "/GorpCore.jpg?height=600&width=1200",
+    galleryImages: ["/GorpCore.png?height=600&width=1200"],
+    // demoUrl: "",
     repoUrl: "https://github.com/noasrdn/GorpCore.git",
     features: [
       "Maquettage de la page sur Figma",
@@ -105,8 +105,10 @@ const projectsData: { [key: string]: any } = {
       "Shadow Energy Drink est un projet réalisé lors d'un TP de Création Numérique. La consigne était de choisir un sujet parmi une liste et de concevoir toute son identité publicitaire : logo, nom de marque, direction artistique et mise en situation du produit.",
     tags: ["PhotoShop", "Illustrator"],
     image: "/Shadow.png?height=600&width=1200",
-    galleryImages: ["/Shadow_1.png?height=300&width=600", 
-      "/Logo_Shadow.png?height=300&width=600"],
+    galleryImages: [
+      "/Shadow_1.png?height=300&width=600",
+      "/Logo_Shadow.png?height=300&width=600",
+    ],
     features: [
       "Création du logotype",
       "Design du packaging",
@@ -153,8 +155,8 @@ const projectsData: { [key: string]: any } = {
     tags: ["Photoshop", "Illustrator"],
     image: "/kama.png?height=600&width=1200",
     galleryImages: ["/mockup_kama.png?height=300&width=600"],
-    demoUrl: "",
-    repoUrl: "",
+    // demoUrl: "",
+    // repoUrl: "",
     features: [
       "Conception graphique de l'affiche",
       "Mise en situation (Mock-up)",
@@ -174,14 +176,17 @@ const projectsData: { [key: string]: any } = {
     fullDescription:
       "AIRIS est une révolution. Ces lunettes permettent aux personnes malvoyantes de 'voir' le monde par l'ouïe. L'IA intégrée analyse le champ de vision et décrit auditivement les obstacles face à l'utilisateur, favorisant ainsi son autonomie malgré le handicap.",
     tags: ["Figma", "Powerpoint", "Illustrator", "Photoshop"],
-    image: "/Airis.png?height=600&width=1200",
-    galleryImages: ["/Airis_1.png?height=600&width=1200","/Airis_2.png?height=600&width=1200"],
+    image: "/Airis.jpg?height=600&width=1200",
+    galleryImages: [
+      "/Airis_1.png?height=600&width=1200",
+      "/Airis_2.png?height=600&width=1200",
+    ],
     demoUrl: "",
     repoUrl: "",
     features: [
       "Création d'un Produit Révolutionnaire.",
       "Storytelling du Produits.",
-      "Maquettage de la MarketPlace."
+      "Maquettage de la MarketPlace.",
     ],
     challenge:
       "Le défi consistait à inventer un produit innovant inexistant et à réaliser l'intégralité de sa campagne commerciale.",
@@ -196,18 +201,14 @@ const projectsData: { [key: string]: any } = {
     description: "Site Promotionel du Film The Amazing Spiderman 2.",
     fullDescription:
       "Ce projet vise à promouvoir le film en intégrant une API de cartographie. Elle offre un accès ergonomique aux utilisateurs pour localiser les cinémas les plus proches ou identifier les plateformes de streaming disponibles.",
-    tags: [
-      "Figma",
-      "HTML",
-      "CSS",
-      "Photoshop",
-      "Illustrator",
-      "TypeScript",
+    tags: ["Figma", "HTML", "CSS", "Photoshop", "Illustrator", "TypeScript"],
+    image: "/Spiderman.jpg?height=600&width=1200",
+    galleryImages: [
+      "/spiderman_1.png?height=300&width=600",
+      "/spiderman_2.png?height=300&width=600",
     ],
-    image: "/Spiderman.png?height=600&width=1200",
-    galleryImages: ["/spiderman_1.png?height=300&width=600", "/spiderman_2.png?height=300&width=600"],
-    demoUrl: "",
-    repoUrl: "",
+    // demoUrl: "",
+    // repoUrl: "",
     features: [
       "Maquettage complet sur Figma",
       "Préparation des assets",
@@ -225,32 +226,17 @@ const projectsData: { [key: string]: any } = {
     ],
   },
 };
-
 export default function ProjectDetails({ params }: ProjectDetailsProps) {
-  const project = projectsData[params.id];
+  const resolvedParams = use(params);
+  const project = projectsData[resolvedParams.id];
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [params.id]);
+  }, []);
 
-  if (!project) {
-    return (
-      <div className="min-h-screen bg-gradient-to-b from-zinc-900 via-zinc-900 to-black text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">Project Not Found</h1>
-          <p className="text-zinc-400 mb-8">
-            Sorry, we couldn't find the project you're looking for.
-          </p>
-          <Button
-            asChild
-            className="bg-gradient-to-r from-brand-blue to-brand-rose hover:from-brand-rose hover:to-brand-blue border-0"
-          >
-            <Link href="/#projects">Back to Projects</Link>
-          </Button>
-        </div>
-      </div>
-    );
-  }
+  if (!project) return <div>Projet non trouvé</div>;
+
+  
 
   return (
     <Suspense fallback={<PageLoader />}>
@@ -292,35 +278,42 @@ export default function ProjectDetails({ params }: ProjectDetailsProps) {
               </div>
 
               <div className="flex flex-wrap gap-4 pt-6">
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-brand-blue to-brand-rose hover:from-brand-rose hover:to-brand-blue border-0"
-                  asChild
-                >
-                  <Link
-                    href={project.demoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                {/* BLOC INDÉPENDANT 1 : VIEW LIVE DEMO */}
+                {project.demoUrl && project.demoUrl !== "" && (
+                  <Button
+                    size="lg"
+                    className="bg-gradient-to-r from-brand-blue to-brand-rose hover:from-brand-rose hover:to-brand-blue border-0"
+                    asChild
                   >
-                    View Live Demo
-                    <ArrowUpRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-zinc-700 text-zinc-300 hover:bg-zinc-800 bg-transparent"
-                  asChild
-                >
-                  <Link
-                    href={project.repoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    <Link
+                      href={project.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View Live Demo
+                      <ArrowUpRight className="ml-2 h-5 w-5" />
+                    </Link>
+                  </Button>
+                )}
+
+                {/* BLOC INDÉPENDANT 2 : VIEW CODE */}
+                {project.repoUrl && project.repoUrl !== "" && (
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-zinc-700 text-zinc-300 hover:bg-zinc-800 bg-transparent"
+                    asChild
                   >
-                    View Code
-                    <Github className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
+                    <Link
+                      href={project.repoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View Code
+                      <Github className="ml-2 h-5 w-5" />
+                    </Link>
+                  </Button>
+                )}
               </div>
             </div>
 
