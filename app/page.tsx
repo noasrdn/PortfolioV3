@@ -1,6 +1,9 @@
 "use client";
 
+// import * as THREE from 'three';
 import Link from "next/link";
+import dynamic from 'next/dynamic';
+
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -8,12 +11,19 @@ import { ProjectCard } from "@/components/project-card";
 import { SkillBadge } from "@/components/skill-badge";
 import { Timeline } from "@/components/timeline";
 import { ContactForm } from "@/components/contact-form";
-import { CreativeHero } from "@/components/creative-hero";
+// import { CreativeHero } from "@/components/creative-hero";
+import  Logo3D  from "@/components/Logo3D";
 import { FloatingNav } from "@/components/floating-nav";
 import { MouseFollower } from "@/components/mouse-follower";
 import { ScrollProgress } from "@/components/scroll-progress";
 import { SectionHeading } from "@/components/section-heading";
 import { GlassmorphicCard } from "@/components/glassmorphic-card";
+import { useEffect, useRef } from 'react';
+import {LiquidEther} from '@/components/LiquidEther';
+import Spline from '@splinetool/react-spline/next';
+import Home from '@/components/SplineScene';
+
+import './globals.css';
 
 export default function Portfolio() {
   const handleViewProjects = () => {
@@ -30,6 +40,8 @@ export default function Portfolio() {
     }
   };
 
+
+  
   return (
     <div className="min-h-screen bg-gradient-to-b from-zinc-900 via-zinc-900 to-black text-white overflow-hidden">
       <MouseFollower />
@@ -37,107 +49,86 @@ export default function Portfolio() {
       <FloatingNav />
 
       {/* Hero Section */}
+
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-brand-blue rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-          <div
-            className="absolute top-40 right-10 w-72 h-72 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"
-            style={{ backgroundColor: "rgb(12 7 110)" }}
-          ></div>
-          <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-brand-rose rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
-        </div>
+  {/* BACKGROUND LAYER */}
+  <div className="absolute inset-0 z-0">
+    {/* Ton élément LiquidEther intégré ici */}
+    <div className="absolute inset-0 w-full h-full opacity-60">
+      <LiquidEther
+        colors={['#5227FF', '#3B82F6', '#B497CF']}
+        mouseForce={20}
+        cursorSize={100}
+        isViscous={false}
+        viscous={30}
+        iterationsViscous={12}
+        iterationsPoisson={32}
+        resolution={0.5}
+        isBounce={false}
+        autoDemo
+        autoSpeed={0.5}
+        autoIntensity={3.5}
+        takeoverDuration={0.25}
+        autoResumeDelay={3000}
+        autoRampDuration={0.6}
+        color0="#5227FF"
+        color1="#3B82F6"
+        color2="#B497CF"
+      />
+    </div>
+    
+  </div>
 
-        <div className="container relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <div className="inline-block">
-              <div className="relative px-3 py-1 text-sm font-medium rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-4 mt-4">
-                <span className="relative z-10">
-                  Futur Full-Stack Web Developper{" "}
-                </span>
-                <span className="absolute inset-0 rounded-full bg-gradient-to-r from-brand-blue/20 to-brand-rose/20 animate-pulse"></span>
-              </div>
-            </div>
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-              <span className="block">Hi, I'm</span>
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue/90 to-brand-rose">
-                NOA SERODON
-              </span>
-            </h1>
-            <p className="text-xl text-zinc-400 max-w-[600px]">
-              I craft digital experiences with code, creativity, and a passion
-              for innovation.
-            </p>
-            <div className="flex flex-wrap gap-4 pt-4">
-              <Button
-                onClick={handleViewProjects}
-                className="relative overflow-hidden group bg-gradient-to-r from-brand-blue to-brand-rose border-0"
-              >
-                <span className="relative z-10 flex items-center">
-                  View Projects{" "}
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </span>
-                <span className="absolute inset-0 bg-gradient-to-r from-brand-rose to-brand-blue opacity-0 group-hover:opacity-100 transition-opacity"></span>
-              </Button>
-              <Button
-                onClick={handleContactMe}
-                variant="outline"
-                className="border-zinc-700 text-brand-rose hover:text-brand-blue hover:border-zinc-500 bg-transparent"
-              >
-                Contact Me
-              </Button>
-            </div>
-            <div className="flex gap-4 pt-4">
-              <Link
-                href="https://github.com/noasrdn"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="rounded-full bg-zinc-800/50 hover:bg-zinc-800 text-zinc-400 hover:text-white"
-                >
-                  <Github className="h-5 w-5" />
-                  <span className="sr-only">GitHub</span>
-                </Button>
-              </Link>
-              <Link
-                href="https://www.linkedin.com/in/noa-serodon-77a836203"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="rounded-full bg-zinc-800/50 hover:bg-zinc-800 text-zinc-400 hover:text-white"
-                >
-                  <Linkedin className="h-5 w-5" />
-                  <span className="sr-only">LinkedIn</span>
-                </Button>
-              </Link>
-              <Link href="mailto:noa.serodon@iut-dijon.u-bourgogne.fr">
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="rounded-full bg-zinc-800/50 hover:bg-zinc-800 text-zinc-400 hover:text-white"
-                >
-                  <Mail className="h-5 w-5" />
-                  <span className="sr-only">Email</span>
-                </Button>
-              </Link>
-            </div>
-          </div>
-          <div className="flex justify-center">
-            <CreativeHero />
-          </div>
+  {/* CONTENT LAYER */}
+  <div className="container relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div className="space-y-6">
+      <div className="inline-block">
+        <div className="relative px-3 py-1 text-sm font-medium rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-4 mt-4">
+          <span className="relative z-10">Futur Full-Stack Web Developper</span>
+          <span className="absolute inset-0 rounded-full bg-gradient-to-r from-brand-blue/20 to-brand-rose/20 animate-pulse"></span>
         </div>
+      </div>
+      <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
+        <span className="block">Hi, I'm</span>
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue/90 to-brand-rose">
+          NOA SERODON
+        </span>
+      </h1>
+      <p className="text-xl text-zinc-400 max-w-[600px]">
+        I craft digital experiences with code, creativity, and a passion for innovation.
+      </p>
+      
+      {/* Boutons et Réseaux sociaux... (pas de changement ici) */}
+      <div className="flex flex-wrap gap-4 pt-4">
+        <Button onClick={handleViewProjects} className="relative overflow-hidden group bg-gradient-to-r from-brand-blue to-brand-rose border-0">
+          <span className="relative z-10 flex items-center">
+            View Projects <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+          </span>
+          <span className="absolute inset-0 bg-gradient-to-r from-brand-rose to-brand-blue opacity-0 group-hover:opacity-100 transition-opacity"></span>
+        </Button>
+        <Button onClick={handleContactMe} variant="outline" className="border-zinc-700 text-brand-rose hover:text-brand-blue hover:border-zinc-500 bg-transparent">
+          Contact Me
+        </Button>
+      </div>
 
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 rounded-full border-2 border-white/20 flex justify-center items-start p-1">
-            <div className="w-1.5 h-1.5 rounded-full bg-white/60 animate-pulse"></div>
-          </div>
-        </div>
-      </section>
+      <div className="flex gap-4 pt-4">
+        {/* Liens Github, LinkedIn, Mail... (pas de changement ici) */}
+      </div>
+    </div>
+
+<div className="h-[600px] w-full flex justify-center bg-transparent">
+
+    </div>
+
+  </div>
+
+  {/* Scroll Indicator */}
+  <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+    <div className="w-6 h-10 rounded-full border-2 border-white/20 flex justify-center items-start p-1">
+      <div className="w-1.5 h-1.5 rounded-full bg-white/60 animate-pulse"></div>
+    </div>
+  </div>
+</section>
 
       {/* About Section */}
       <section id="about" className="py-32 relative">
