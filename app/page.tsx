@@ -67,9 +67,6 @@ export default function Portfolio() {
         takeoverDuration={0.25}
         autoResumeDelay={3000}
         autoRampDuration={0.6}
-        color0="#5227FF"
-        color1="#3B82F6"
-        color2="#B497CF"
       />
     </div>
     
