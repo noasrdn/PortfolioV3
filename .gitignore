@@ -1,0 +1,66 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files
+.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+#Upgrade
+J'ai compris, tu as besoin de la *mémoire* de la conversation sous forme de note, mais cette fois-ci, pour les commandes **Git** et le processus de déploiement de ton code sur Vercel !
+
+C'est parfait pour la maintenance de ton portfolio. Voici la note que tu peux garder :
+
+---
+
+# 🚀 Guide de déploiement Git & Vercel (noaserodon/portfolio)
+
+Ce guide résume les commandes essentielles pour mettre à jour ton code local sur GitHub, puis le déployer sur Vercel.
+
+Ton projet est déployé depuis GitHub, sur la branche `main`, sous le nom de `portfolio-v3-nine-peach.vercel.app` (qui sera bientôt `noaserodon.com`).
+
+## 1. Mettre à jour ton code local (Local vers GitHub)
+
+Utilise ces trois commandes dans ton terminal (dans le dossier de ton projet) pour enregistrer tes modifications et les envoyer sur GitHub :
+
+| Commande | Explication |
+| :--- | :--- |
+| `git add .` | Ajoute **tous** les fichiers modifiés ou nouveaux à la prochaine version (ou *staging area*). |
+| `git commit -m "Un message clair sur mes changements"` | Enregistre les changements dans l'historique local. Remplace le texte entre guillemets par un message décrivant ce que tu as fait (ex: "fix: correction de la casse des noms d'images"). |
+| `git push origin main` | Envoie tes changements depuis ton historique local vers la branche `main` de ton dépôt GitHub. |
+
+## 2. Déploiement automatique sur Vercel
+
+Le déploiement sur Vercel est **automatique** une fois que la commande `git push` est exécutée.
+
+1.  **Déclenchement :** Dès que GitHub reçoit la nouvelle version de la branche `main`, un nouveau *build* est déclenché sur Vercel.
+2.  **Statut :** Tu peux vérifier le statut dans ton tableau de bord Vercel. Le statut devrait passer à **Ready** (Prêt) en quelques minutes.
+3.  **Mise à jour du site :** Une fois que Vercel affiche **Ready**, ton site `noaserodon.com` est automatiquement mis à jour avec la nouvelle version du code.
+
+## 3. Déploiement manuel (Si besoin)
+
+Si jamais le déploiement ne se déclenche pas automatiquement après un `git push`, tu peux le lancer manuellement depuis l'interface Vercel :
+
+1.  Va sur ton projet Vercel.
+2.  Clique sur le bouton **Redeploy** (Redéployer).
+3.  Tu verras un nouveau déploiement se lancer (ex: `DRpSUBA3D`).
