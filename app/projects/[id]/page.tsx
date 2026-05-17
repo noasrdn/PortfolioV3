@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { Suspense } from "react";
 import { PageLoader } from "@/components/page-loader";
 
+
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
@@ -228,8 +229,12 @@ const projectsData: { [key: string]: any } = {
     ],
   },
 };
-export default function ProjectDetails({ params }: ProjectDetailsProps) {
-  const resolvedParams = use(params);
+
+export default function ProjectDetails({ params }: any) {
+  // 1. On "ouvre" params avec la fonction use() de React
+  const resolvedParams = use(params) as { id: string };
+  
+  // 2. Maintenant on peut lire l'id en toute sécurité
   const project = projectsData[resolvedParams.id];
 
   useEffect(() => {
@@ -237,7 +242,6 @@ export default function ProjectDetails({ params }: ProjectDetailsProps) {
   }, []);
 
   if (!project) return <div>Projet non trouvé</div>;
-
   
 
   return (
