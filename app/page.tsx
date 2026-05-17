@@ -67,7 +67,7 @@ export default function Portfolio() {
         takeoverDuration={0.25}
         autoResumeDelay={3000}
         autoRampDuration={0.6}
-      />git status
+      />
     </div>
     
   </div>
