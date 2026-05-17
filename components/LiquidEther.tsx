@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 "use client"
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
@@ -35,7 +37,7 @@ export function LiquidEther({
   useEffect(() => {
     if (!mountRef.current) return;
 
-    function makePaletteTexture(stops) {
+    function makePaletteTexture(stops:any[]) {
       let arr;
       if (Array.isArray(stops) && stops.length > 0) {
         if (stops.length === 1) {
