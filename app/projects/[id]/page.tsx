@@ -228,7 +228,6 @@ const projectsData: { [key: string]: any } = {
     ],
   },
 };
-
 export default function ProjectDetails({ params }: ProjectDetailsProps) {
   const resolvedParams = use(params);
   const project = projectsData[resolvedParams.id];
