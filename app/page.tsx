@@ -17,6 +17,8 @@ import { SectionHeading } from "@/components/section-heading";
 import { GlassmorphicCard } from "@/components/glassmorphic-card";
 
 import {LiquidEther} from '@/components/LiquidEther';
+import MetallicPaint from "@/components/MetallicPaint";
+import logo from '../public/logo.svg';
 
 
 import './globals.css';
@@ -53,8 +55,8 @@ export default function Portfolio() {
     <div className="absolute inset-0 w-full h-full opacity-60">
       <LiquidEther
         colors={['#5227FF', '#3B82F6', '#B497CF']}
-        mouseForce={20}
-        cursorSize={100}
+        mouseForce={50}
+        cursorSize={200}
         isViscous={false}
         viscous={30}
         iterationsViscous={12}
@@ -62,8 +64,8 @@ export default function Portfolio() {
         resolution={0.5}
         isBounce={false}
         autoDemo
-        autoSpeed={0.5}
-        autoIntensity={3.5}
+        autoSpeed={0.25}
+        autoIntensity={4}
         takeoverDuration={0.25}
         autoResumeDelay={3000}
         autoRampDuration={0.6}
@@ -91,7 +93,7 @@ export default function Portfolio() {
         I craft digital experiences with code, creativity, and a passion for innovation.
       </p>
       
-      {/* Boutons et Réseaux sociaux... (pas de changement ici) */}
+      {/* Boutons et Réseaux sociaux... */}
       <div className="flex flex-wrap gap-4 pt-4">
         <Button onClick={handleViewProjects} className="relative overflow-hidden group bg-gradient-to-r from-brand-blue to-brand-rose border-0">
           <span className="relative z-10 flex items-center">
@@ -104,12 +106,39 @@ export default function Portfolio() {
         </Button>
       </div>
 
-      <div className="flex gap-4 pt-4">
-        {/* Liens Github, LinkedIn, Mail... (pas de changement ici) */}
-      </div>
+      
     </div>
 
 <div className="h-[600px] w-full flex justify-center bg-transparent">
+  <div style={{ width: '100%', height: '100%' }}>
+      <MetallicPaint
+        imageSrc={logo.src}
+        // Pattern
+        seed={42}
+        scale={4}
+        patternSharpness={1}
+        noiseScale={0.5}
+        // Animation
+        speed={0.3}
+        liquid={0.75}
+        mouseAnimation={false}
+        // Visual
+        brightness={2}
+        contrast={0.5}
+        refraction={0.01}
+        blur={0.015}
+        chromaticSpread={2}
+        fresnel={1}
+        angle={0}
+        waveAmplitude={1}
+        distortion={1}
+        contour={0.2}
+        // Colors
+        lightColor="#b4bdce"
+        darkColor="#1800ff"
+        tintColor="#7C3AED"
+      />
+    </div>
 
     </div>
 
