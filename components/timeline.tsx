@@ -9,7 +9,7 @@ const experiences = [
     company: "ELEVATE",
     period: "2026",
     description:
-      "1 mois en intérimaire chez Granger Frère, une usine de Plasturgie .",
+      "2 mois de stage chez ELEVATE afin de transfomer leur outils d'autodiagnostic fixe (SAT), en un outil dynamique et interactif, avec une interface plus moderne et intuitive.",
   },
     {
     title: "Formation en ligne sur la technologie Three.js",
